@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acadium</title>
+    <link rel="shortcut icon" href="./img/cropped-favicon-2-1-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+    <!-- header section -->
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <figure class="nav__logo">
+                    <svg width="308" height="64" viewBox="0 0 308 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M83.0137 56.8871L99.6396 17.5564H105.683L122.309 56.8871H114.762L111.515 49.0447H93.807L90.56 56.8871H83.0137ZM96.0318 43.2223H109.29L102.676 27.2108L96.0318 43.2223Z"
+                            fill="#161718" />
+                        <path
+                            d="M150.059 32.4391L145.819 36.8059C144.899 35.7995 143.77 35.0003 142.509 34.4622C141.249 33.9241 139.886 33.6596 138.514 33.6867C137.336 33.6638 136.166 33.8786 135.075 34.3179C133.984 34.7571 132.996 35.4117 132.17 36.2414C130.516 37.905 129.675 40.0735 129.675 42.5985C129.675 45.1235 130.516 47.2921 132.17 48.9853C132.997 49.8111 133.987 50.4611 135.078 50.8953C136.169 51.3295 137.338 51.5388 138.514 51.5103C139.883 51.5354 141.243 51.273 142.502 50.7404C143.762 50.2078 144.892 49.4173 145.819 48.4209L150.059 52.758C146.962 56.0256 143.144 57.6594 138.514 57.6594C133.884 57.6594 130.426 56.2633 127.39 53.3818C124.353 50.5003 122.88 46.8762 122.88 42.5985C122.88 38.3209 124.353 34.7561 127.39 31.8747C130.426 28.9932 134.124 27.5376 138.514 27.5376C142.903 27.5376 146.962 29.1714 150.059 32.4391Z"
+                            fill="#161718" />
+                        <path
+                            d="M175.523 32.5577V28.4286H182.378V56.8869H175.523V52.7578C174.561 55.5204 171.073 57.481 166.323 57.481C162.264 57.481 158.837 56.0848 156.041 53.2628C153.245 50.4407 151.952 46.876 151.952 42.6577C151.952 38.4395 153.305 34.9342 156.041 32.1121C158.777 29.2901 162.264 27.8345 166.323 27.8345C171.073 27.8345 174.561 29.7951 175.523 32.5577ZM173.449 48.8663C174.294 48.0669 174.961 47.1015 175.406 46.0323C175.851 44.963 176.065 43.8136 176.034 42.6577C176.065 41.5019 175.851 40.3525 175.406 39.2832C174.961 38.214 174.294 37.2486 173.449 36.4492C172.634 35.6431 171.663 35.009 170.593 34.5851C169.523 34.1613 168.377 33.9566 167.225 33.9836C166.091 33.9589 164.964 34.1651 163.914 34.5892C162.864 35.0134 161.914 35.6465 161.122 36.4492C159.529 38.083 158.747 40.1624 158.747 42.6577C158.747 45.153 159.529 47.2325 161.122 48.8663C161.914 49.6689 162.864 50.3021 163.914 50.7262C164.964 51.1504 166.091 51.3566 167.225 51.3319C168.377 51.3588 169.523 51.1542 170.593 50.7303C171.663 50.3065 172.634 49.6723 173.449 48.8663V48.8663Z"
+                            fill="#161718" />
+                        <path
+                            d="M210.068 32.5579V17.5564H216.923V56.8871H210.068V52.758C209.106 55.5206 205.618 57.4812 200.868 57.4812C196.809 57.4812 193.382 56.085 190.586 53.263C187.79 50.4409 186.467 46.8762 186.467 42.6579C186.467 38.4397 187.85 34.9344 190.586 32.1123C193.322 29.2903 196.809 27.8347 200.868 27.8347C205.618 27.8347 209.106 29.7953 210.068 32.5579ZM207.993 48.8665C208.839 48.0671 209.506 47.1017 209.951 46.0325C210.396 44.9632 210.61 43.8137 210.579 42.6579C210.61 41.5021 210.396 40.3526 209.951 39.2834C209.506 38.2142 208.839 37.2488 207.993 36.4494C207.179 35.6433 206.208 35.0092 205.138 34.5853C204.068 34.1615 202.922 33.9568 201.77 33.9838C200.636 33.9591 199.509 34.1653 198.459 34.5894C197.409 35.0136 196.458 35.6467 195.667 36.4494C194.073 38.0832 193.261 40.1626 193.261 42.6579C193.261 45.1532 194.073 47.2327 195.667 48.8665C196.458 49.6691 197.409 50.3023 198.459 50.7264C199.509 51.1506 200.636 51.3568 201.77 51.3321C202.922 51.359 204.068 51.1544 205.138 50.7305C206.208 50.3067 207.179 49.6725 207.993 48.8665V48.8665Z"
+                            fill="#161718" />
+                        <path
+                            d="M221.643 21.121C221.631 20.3208 221.86 19.5352 222.301 18.8637C222.741 18.1922 223.374 17.6652 224.118 17.3495C224.862 17.0337 225.685 16.9435 226.481 17.0902C227.277 17.2369 228.011 17.614 228.59 18.1736C229.169 18.7332 229.567 19.4501 229.733 20.2333C229.899 21.0166 229.826 21.831 229.523 22.5731C229.22 23.3153 228.701 23.9518 228.031 24.402C227.362 24.8522 226.572 25.0957 225.762 25.1016C225.226 25.1095 224.695 25.0125 224.197 24.8164C223.7 24.6202 223.247 24.3287 222.864 23.9587C222.481 23.5887 222.176 23.1474 221.966 22.6604C221.757 22.1734 221.647 21.6502 221.643 21.121V21.121ZM222.335 56.887V28.4287H229.189V56.887H222.335Z"
+                            fill="#161718" />
+                        <path
+                            d="M234.33 28.4287H241.245V45.0343C241.245 49.312 243.68 51.3914 247.529 51.3914C251.377 51.3914 253.812 49.2526 253.812 44.9749V28.4287H260.697V45.4205C260.697 49.3714 259.464 52.4311 256.939 54.5105C254.413 56.59 251.287 57.6 247.468 57.6C243.65 57.6 240.493 56.59 238.028 54.5105C235.563 52.4311 234.33 49.4902 234.33 45.5988V28.4287Z"
+                            fill="#161718" />
+                        <path
+                            d="M265.839 56.887V28.4287H272.634V32.4984C273.836 29.7357 276.752 27.8643 280.42 27.8643C284.088 27.8643 287.035 29.5278 288.448 32.8549C290.101 29.5278 293.258 27.8643 297.888 27.8643C304.202 27.8643 307.87 32.231 307.87 39.2714V56.887H301.015V40.2219C301.015 36.3305 299.121 33.9243 295.874 33.9243C292.627 33.9243 290.161 36.6275 290.161 40.519V56.887H283.367V40.2219C283.367 36.3305 281.503 33.9243 278.226 33.9243C274.949 33.9243 272.634 36.6869 272.634 40.519V56.887H265.839Z"
+                            fill="#161718" />
+                        <path
+                            d="M65.7564 42.6578L37.9764 2.40618C37.4664 1.66486 36.7807 1.05805 35.9789 0.638655C35.1771 0.219257 34.2837 0 33.3765 0C32.4693 0 31.5759 0.219257 30.7741 0.638655C29.9723 1.05805 29.2865 1.66486 28.7766 2.40618L0.966501 42.6578C0.27504 43.6634 -0.0614291 44.8663 0.00923232 46.08C0.0798937 47.2938 0.553741 48.4506 1.35734 49.3713L12.4513 62.0557C12.9382 62.6203 13.5352 63.0823 14.2067 63.414C14.8782 63.7457 15.6104 63.9405 16.3597 63.9866H16.7205C18.0996 63.9871 19.4292 63.4786 20.4486 62.5607L32.5046 51.8072C32.7428 51.5922 33.0538 51.473 33.3765 51.473C33.6991 51.473 34.0101 51.5922 34.2484 51.8072L46.2743 62.5607C46.8266 63.0595 47.475 63.443 48.1807 63.6884C48.8864 63.9338 49.635 64.036 50.3817 63.9888C51.1283 63.9417 51.8577 63.7462 52.5261 63.414C53.1944 63.0819 53.7881 62.6199 54.2716 62.0557L65.3956 49.3713C66.1947 48.4473 66.6631 47.2887 66.7284 46.075C66.7936 44.8613 66.452 43.6602 65.7564 42.6578ZM51.3854 29.2901L35.481 43.4598V6.26796L51.3854 29.2901ZM31.2419 6.26796V43.4301L15.3977 29.2604L31.2419 6.26796ZM16.6303 59.7684C16.4482 59.7604 16.2694 59.717 16.1043 59.6405C15.9391 59.5641 15.791 59.4561 15.6682 59.3228L4.57429 46.6086C4.38782 46.3917 4.27811 46.1206 4.26183 45.8364C4.24555 45.5522 4.32359 45.2706 4.4841 45.0342L12.9624 32.7657L30.2197 48.1831L29.6484 48.6881L17.5924 59.4416C17.4637 59.559 17.3118 59.6487 17.1461 59.705C16.9805 59.7612 16.8049 59.7828 16.6303 59.7684ZM62.1486 46.6086L51.0547 59.3228C50.8141 59.585 50.48 59.7447 50.1227 59.7684C49.9435 59.7834 49.7631 59.7622 49.5925 59.706C49.4219 59.6498 49.2647 59.5598 49.1305 59.4416L49.0403 59.3525L36.5634 48.1831L53.7906 32.7954L62.2388 45.0342C62.3993 45.2706 62.4774 45.5522 62.4611 45.8364C62.4448 46.1206 62.3351 46.3917 62.1486 46.6086V46.6086Z"
+                            fill="#E01F5C" />
+                    </svg>
+                </figure>
+                <ul class="nav__list" id="navList">
+                    <figure id="crossIcon">
+                        <img src="./img/asset 46.svg" class="cross-icon">
+                    </figure>
+                    <li class="nav__link drop--link drop--link__first" id="navLinkFirst"><a href="#"
+                            class="link__list">For Marketers</a> <img src="./img/asset 32.svg" class="drop--icon"></li>
+                    <li class="nav__link drop--link drop--link__second" id="navLinkSecond"><a href="#"
+                            class="link__list">For Business</a><img src="./img/asset 32.svg" class="drop--icon"></li>
+                    <li class="nav__link"><a href="#" class="link__list">Blog</a></li>
+                    <div class="nav__link btn">
+                        <div class="nav__link btn__group btn">
+                            <li class="btn-sign"><a href="#" class="link__list">Sign In</a></li>
+                            <li class=""><a href="#" class="link__list">
+                                    <button class="btn--primary">Create Account</button>
+                                </a></li>
+                        </div>
+                    </div>
+                </ul>
+                <img src="./img/asset 31.svg" class="ham-icon" id="hamIcon">
+            </nav>
+
+            <ul class="hover__card__first" id="hoverCardFirst">
+                <li class="card">
+                    <img src="./img/asset 0.jpeg" alt="">
+                    <h6 class="card__heading">Courses and Tasks</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__blue">
+                    <img src="./img/asset 1.jpeg" alt="">
+                    <h6 class="card__heading">Apprenticeship</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__light-blue">
+                    <img src="./img/asset 2.jpeg" alt="">
+                    <h6 class="card__heading">Freelance</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__dark-blue">
+                    <img src="./img/asset 3.jpeg" alt="">
+                    <h6 class="card__heading">Acadium Plus</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+            </ul>
+
+            <ul class="hover__card__first" id="hoverCardSecond">
+                <li class="card">
+                    <img src="./img/asset 4.jpeg" alt="">
+                    <h6 class="card__heading">Courses and Tasks</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__blue">
+                    <img src="./img/asset 5.jpeg" alt="">
+                    <h6 class="card__heading">Apprenticeship</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__light-blue">
+                    <img src="./img/asset 6.jpeg" alt="">
+                    <h6 class="card__heading">Freelance</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+
+                <li class="card bg__gray">
+                    <img src="./img/asset 7.jpeg" alt="">
+                    <h6 class="card__heading">Acadium Plus</h6>
+                    <p class="card__description">Learn making basics and build your portfolio</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="heading-one">Start your digital marketing career</h1>
+                <p class="text-md">Gain the work experience, mentorship, and support you need to start your career in
+                    digital marketing.</p>
+                <div class="hero__btn--group">
+                    <button class="btn--primary">Start Your Career</button>
+                    <button class="btn--outline">Find Talent</button>
+                </div>
+            </div>
+            <img src="./img/asset 8.jpeg" alt="">
+        </div>
+    </section>
+
+    <!-- Card Link -->
+    <section class="card-link">
+        <div class="container">
+            <div class="card__flex">
+                <div class="card__single">
+                    <div class="card">
+                        <h4 class="heading-four card__heading">Apprenticeships</h4>
+                        <h5 class="heading-three card__heading-mega">Gain work experience</h5>
+                        <p class="text-sm card__description">Work with a mentor for 3 monts and gain the marketing
+                            experience you need to get hired.</p>
+                        <img src="./img/asset 1.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__collection">
+                    <div class="card bg__pink">
+                        <h4 class="heading-four card__heading">Courses and Tasks</h4>
+                        <h5 class="heading-three card__heading-mega">Learn marketing basics</h5>
+                        <p class="text-sm card__description">Learn marketing basics with free courses and build an
+                            impressive portfolio real-world tasks.</p>
+                        <img src="./img/asset 0.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="card bg__light-blue">
+                        <h4 class="heading-four card__heading">Freelance</h4>
+                        <h5 class="heading-three card__heading-mega">Get Paid</h5>
+                        <p class="text-sm card__description">Get connected with clients and start getting paid for your
+                            marketing skills and experience.</p>
+                        <img src="./img/asset 2.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-purple">
+                <div class="banner__grid">
+                    <div class="banner__text">
+                        <img src="./img/asset 33.svg" class="banner__logo">
+                        <h3 class="heading-three">
+                            Get hired full-time in marketing in eight weeks
+                        </h3>
+                        <ul>
+                            <li>
+                                <img src="./img/asset 37.svg" alt="">
+                                <p>Experiential learning with dedicated mentors</p>
+                            </li>
+                            <li>
+                                <img src="./img/asset 37.svg" alt="">
+                                <p>Develop a job search plan that works</p>
+                            </li>
+                            <li>
+                                <img src="./img/asset 37.svg" alt="">
+                                <p>Exclusive access and intros to hiring partners</p>
+                            </li>
+                        </ul>
+                        <div class="banner__btn">
+                            <span>Learn More</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M9 18L15 12L9 6" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <figure class="banner__img">
+                        <img src="./img/asset 12.jpeg" class="img1">
+                        <img src="./img/asset 3.jpeg" class="img2">
+
+                        <div class="banner__btn--down">
+                            <span>Learn More</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M9 18L15 12L9 6" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section black //  marketing-->
+
+    <section class="marketing">
+        <div class="container">
+            <div class="marketing__text">
+                <h4 class="heading-four">For Business</h4>
+                <h2 class="heading-two">Mentor or hire remote marketing talent</h2>
+                <p class="text-bs">Get started, whether you’re a cash-constrained solopreneur, the owner of a mature
+                    company, or anything in between.</p>
+            </div>
+
+            <div class="card__flex">
+                <div class="card__single">
+                    <div class="card">
+                        <h4 class="heading-four card__heading">Apprenticeships</h4>
+                        <h5 class="heading-three card__heading-mega">Gain work experience</h5>
+                        <p class="text-sm card__description">Work with a mentor for 3 monts and gain the marketing
+                            experience you need to get hired.</p>
+                        <img src="./img/asset 5.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__collection">
+                    <div class="card bg__pink">
+                        <h4 class="heading-four card__heading">Apprenticeships</h4>
+                        <h5 class="heading-three card__heading-mega">Gain work experience</h5>
+                        <p class="text-sm card__description">Learn marketing basics with free courses and build an
+                            impressive portfolio real-world tasks.</p>
+                        <img src="./img/asset 4.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="card bg__light-blue">
+                        <h4 class="heading-four card__heading">Apprenticeships</h4>
+                        <h5 class="heading-three card__heading-mega">Gain work experience</h5>
+                        <p class="text-sm card__description">Get connected with clients and start getting paid for your
+                            marketing skills and experience.</p>
+                        <img src="./img/asset 6.jpeg" class="card__img">
+                        <div class="card__btn">
+                            <span>Learn More</span>
+                            <img src="./img/asset 28.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section empowering -->
+    <section class="empowering">
+        <div class="container">
+            <h2 class="heading-two">Empowering marketers and businesses everywhere</h2>
+
+            <!-- swiper slider -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 15.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Emilie Hartung</h6>
+                                        <p class="card__role">Acadium Plus Graduate</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">Acadium Plus has helped me overcome the anxiety and
+                                    pressure of
+                                    imposter syndrome and helped
+                                    me gain more knowledge in the field that I want to be in. I feel like it's
+                                    helped me
+                                    tremendously in growing and becoming the person I want to be.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 16.jpeg" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Maximillian Wolff</h6>
+                                        <p class="card__role">Acadium Plus Graduate</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    The Acadium Plus program was just what I needed. My life is much better off due to
+                                    the quality of instruction and dedicated work of Erik, Vik, and everyone else who
+                                    contributed to making sure that my cohort had the tools and skills necessary to
+                                    excel in digital marketing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 17.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Marci Bryant</h6>
+                                        <p class="card__role">Acadium Mentor</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    I love Acadium! I've had great success with very bright, assertive apprentices who
+                                    have helped me achieve some amazing goals for myself and my clients. I have had 4
+                                    apprentices successfully complete, and the 5th finishes in 2 weeks. I also keep 2-3
+                                    apprentices at a time. My freelancers are exclusively hired through Acadium now.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 18.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Isaiah Roberts</h6>
+                                        <p class="card__role">Acadium Apprentice</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    Acadium is awesome! I've been a part of the platform for about a year and a half now
+                                    and couldn't have asked for a better way to learn about Digital Marketing. This
+                                    combined with some online classes have opened a lot of doors that would be otherwise
+                                    closed and has also given me great relationships with the mentors that I've worked
+                                    with. Keep it up Acadium, I'm looking forward to when I can apprentice someone
+                                    myself one day!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 19.jpeg" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Yauheniya Villarreal</h6>
+                                        <p class="card__role">Acadium Plus Graduate</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    Life is amazing! I love my job and feel confident that my professional career is
+                                    finally taking off. I don't hate Mondays and can honestly say that everything I have
+                                    now is owed to Acadium Plus. Joining Acadium Plus is one of the best decisions that
+                                    I've made. Thank you!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 20.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Vicky Etherington</h6>
+                                        <p class="card__role">Acadium Mentor</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    Using Acadium has been such a catalyst for growth in my business. It's enabled me to
+                                    work with really talented and driven individuals who are hungry to learn and keen to
+                                    have a real business to try out their new skills on. It's also enabled me to 'test
+                                    run' potential team members before making a commitment to bring them into the
+                                    business on a more permanent basis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 21.jpeg" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Stephanie Thor</h6>
+                                        <p class="card__role">Acadium Plus Graduate</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    Acadium Plus has helped me overcome the anxiety and pressure of imposter syndrome
+                                    and helped me gain more knowledge in the field that I want to be in. I feel like
+                                    it's helped me tremendously in growing and becoming the person I want to be.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 22.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Daymonn Lima</h6>
+                                        <p class="card__role">Acadium Courses Student</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">
+                                    Acadium helped me a lot through my learning about digital marketing while I was in
+                                    Canada. It has a very useful app that helps me study even when I am away from my
+                                    laptop. Great team, great people, and amazing opportunities to study for free and
+                                    get a job.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card-border">
+                            <div class="card">
+                                <div class="heading-flex">
+                                    <img src="./img/asset 23.png" class="card__img">
+                                    <div>
+                                        <h6 class="card__name">Emilie Hartung</h6>
+                                        <p class="card__role">Acadium Plus Graduate</p>
+                                    </div>
+                                </div>
+                                <p class="card__description">Acadium Plus has helped me overcome the anxiety and
+                                    pressure of
+                                    imposter syndrome and helped
+                                    me gain more knowledge in the field that I want to be in. I feel like it's
+                                    helped me
+                                    tremendously in growing and becoming the person I want to be.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination-arow">
+                <img src="./img/asset 39.svg" class="swiper-button-next1">
+                <img src="./img/asset 40.svg" class="swiper-button-prev1">
+            </div>
+
+
+            <div class="forbes__flex">
+                <div class="flex__rated">
+                    <img src="./img/asset 24.png" alt="">
+                    <p>Rated Excellent (4.5 out of 5) based on 250+ reviews</p>
+                </div>
+                <div class="flex__brand">
+                    <img src="./img/asset 25.png" alt="">
+                    <p>We recommend Acadium as a proven source of talent to help our founders manage the multiple tasks
+                        required to grow a successful brand.</p>
+                </div>
+                <div class="flex__power">
+                    <img src="./img/asset 26.png" alt="">
+                    <p>The tools that will power the remote work revolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section support -->
+    <section class="support">
+        <div class="container">
+            <div class="support__flex">
+                <div class="support__text">
+                    <h3 class="heading-three">
+                        Get the help you need, every step of the way
+                    </h3>
+
+                    <h5 class="heading-four">
+                        Business Onboarding
+                    </h5>
+                    <p class="text-sm">
+                        Get all your questions answered and your business profile set up quickly.
+                    </p>
+                    <span>Book a call with a Specialist <img src="./img/asset 29.svg" alt=""></span>
+
+                    <h5 class="heading-four">
+                        Business Onboarding
+                    </h5>
+                    <p class="text-sm">
+                        Get all your questions answered and your business profile set up quickly.
+                    </p>
+                    <span>Visit Support <img src="./img/asset 29.svg" alt=""></span>
+                </div>
+                <figure class="support__img">
+                    <img src="./img/asset 27.jpeg" alt="">
+                </figure>
+            </div>
+
+            <div class="support__wrapper">
+                <div class="wrapper__text">
+                    <h1 class="heading-one">Get started with Acadium</h1>
+                    <div class="hero__btn--group">
+                        <button class="btn--primary">Start Your Career</button>
+                        <button class="btn--outline">Find Talent</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <div class="flex__marketers flex__content">
+                    <h5>For Marketers</h5>
+                    <ul>
+                        <li> Courses & Tasks</li>
+                        <li> Apprenticeships</li>
+                        <li> Freelance</li>
+                        <li> Acadium Plus</li>
+                    </ul>
+                </div>
+                <div class="flex__business flex__content">
+                    <h5>For Business</h5>
+                    <ul>
+                        <li> Tasks</li>
+                        <li> Apprenticeships</li>
+                        <li> Freelance</li>
+                    </ul>
+                </div>
+                <div class="flex__marketing flex__content">
+                    <h5>Free Marketing Courses</h5>
+                    <ul>
+                        <li>Digital Marketing</li>
+                        <li>Social Media Marketing</li>
+                        <li>Paid Advertising</li>
+                        <li>SEO</li>
+                        <li>Email Marketing</li>
+                        <li>Content Marketing</li>
+                        <li>Website Design</li>
+                        <li>Marketing Analytics</li>
+                        <li>Public Relations (PR)</li>
+                        <li>Affiliate Marketing</li>
+                        <li>Influencer Marketing</li>
+                        <li>Creating Career Opportunities</li>
+
+                    </ul>
+                </div>
+                <div class="flex__acadium flex__content">
+                    <h5>Acadium</h5>
+                    <ul>
+                        <li>About</li>
+                        <li>Careers</li>
+                        <li>Affiliate Program</li>
+                        <li>Blog</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright__flex">
+                <div class="copyright__text">
+                    <span> © Acadium, Inc.</span><span>·</span><span>Terms of Use</span><span>·</span><span> Privacy
+                        Policy</span><span>·</span><span>Use Policy</span><span>·</span><span> Platform Agreement</span>
+                </div>
+                <div class="social__icons">
+                    <img src="./img/asset 41.svg" alt="">
+                    <img src="./img/asset 42.svg" alt="">
+                    <img src="./img/asset 43.svg" alt="">
+                    <img src="./img/asset 44.svg" alt="">
+                    <img src="./img/asset 45.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

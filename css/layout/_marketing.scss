@@ -1,0 +1,115 @@
+@import '../abstracts/variables';
+
+.marketing {
+    background-color: #222;
+    padding: 128px 0;
+
+    .marketing__text {
+        color: white;
+        max-width: 50%;
+        padding-bottom: 80px;
+
+        .heading-four {
+            color: white;
+            margin-bottom: 24px;
+        }
+
+        .heading-two {
+            margin-bottom: 24px;
+        }
+    }
+
+    .card__flex {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card__single {
+        margin: 128px 0 24px;
+    }
+
+    .card__collection {
+        margin: -128px 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .card {
+        padding: 48px 60px;
+        // width: 50%;
+        background-color: #E6E9FA;
+        border-radius: 40px;
+        cursor: pointer;
+
+        &__heading {
+            margin-bottom: 24px;
+        }
+
+        &__heading-mega {
+            margin-bottom: 24px;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            transition: .3s;
+            width: 160px;
+            padding: 12px 12px 12px 24px;
+            margin-left: -24px;
+            border-radius: 24px;
+
+            img {
+                margin-left: 10px;
+            }
+        }
+
+        &:hover {
+            .card__btn {
+                margin-left: 0px;
+                background-color: white;
+            }
+        }
+    }
+
+    .bg__pink {
+        background-color: #fcf6f0;
+    }
+
+    .bg__light-blue {
+        background-color: #E6F6F5;
+
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .marketing {
+        padding: 100px 0;
+        .marketing__text {
+            max-width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .card__flex {
+            flex-direction: column;
+
+            .card__collection {
+                margin-top: 0px;
+            }
+        }
+
+        .card__single {
+            margin: 0;
+        }
+
+        .card {
+            padding: 32px;
+
+            &__description {
+                display: none;
+            }
+        }
+    }
+}

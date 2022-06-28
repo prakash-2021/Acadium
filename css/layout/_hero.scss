@@ -1,0 +1,40 @@
+@import '../abstracts/variables';
+
+.hero {
+    padding-top: 170px;
+    text-align: center;
+    margin-bottom: 256px;
+
+    &__wrapper {
+        max-width: 796px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-md{
+        margin: 24px 0;
+        // color: #212529;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 850px)  {
+    .hero{
+        &__wrapper{
+            flex: 0 0 83.33%;
+            max-width: 83.33%;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .hero{
+        padding-top: 90px;
+        margin-bottom: 96px;
+
+        .btn--outline{
+            margin-top: 15px;
+        }
+    }
+}

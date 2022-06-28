@@ -1,0 +1,199 @@
+@import '../abstracts/variables';
+
+.empowering {
+    background-color: #f8f8f8;
+    padding: 128px 0 0;
+
+    .heading-two {
+        color: black;
+        text-align: center;
+        max-width: 83%;
+        margin-bottom: 80px;
+        margin-left: 8.33%;
+    }
+
+    .card-border {
+        border: 1px solid #222;
+        max-width: 400px;
+        height: 30em;
+        background-color: white;
+        border-radius: 24px;
+
+        .card {
+            border: 1px solid #222;
+            max-width: 400px;
+            height: 30em;
+            background-color: white;
+            border-radius: 24px;
+            padding: 24px;
+            transform: translate(7px, -7px);
+
+            .heading-flex {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .card__img {
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    height: 48px;
+                    width: 48px;
+                }
+
+                .name__info {
+                    .card__name {
+
+                        font-size: 14px;
+                        line-height: 1.42;
+                        color: #222;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 1.42;
+                        color: #222;
+                    }
+                }
+            }
+
+            .card__description {
+                color: #484848;
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .forbes__flex {
+        display: flex;
+        padding: 112px 0 128px;
+
+        img {
+            max-width: 100%;
+        }
+
+        .flex__rated {
+            max-width: 25%;
+            flex: 0 0 25%;
+            padding: 0 4px;
+        }
+
+        .flex__brand {
+            margin-left: 8.33%;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding: 0 12px;
+
+            img {
+                width: 256px;
+            }
+        }
+
+        .flex__power {
+            margin-left: 8.33%;
+            max-width: 25%;
+            flex: 0 0 25%;
+            padding: 0 4px;
+        }
+
+        p {
+            color: #484848;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 48px;
+        }
+    }
+}
+
+
+.swiper {
+    padding: 20px;
+}
+
+.pagination-arow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.swiper-button-next1 {
+    text-align: center;
+    cursor: pointer;
+}
+
+.swiper-button-prev1 {
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.swiper-button-next1:hover,
+.swiper-button-prev1:hover {
+    opacity: .7;
+}
+
+@media only screen and (max-width: 850px) {
+    .empowering {
+        .card-border {
+            min-width: 100%;
+            max-width: none;
+
+            .card {
+                min-width: 100%;
+                max-width: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .empowering{
+    .pagination-arow {
+        display: none;
+    }
+
+    .forbes__flex {
+        flex-direction: column;
+
+        .flex__rated {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0 4px;
+
+            img{
+                max-width: 192px;
+            }
+        }
+
+        .flex__brand {
+            margin-left: 0%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 12px;
+            margin-top: 50px;
+
+            img {
+                width: 192px;
+            }
+        }
+
+        .flex__power {
+            margin-left: 0%;
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding: 0 4px;
+            margin-top: 50px;
+
+            img{
+                max-width: 192px;
+            }
+        }
+        p{
+            margin-top: 10px;
+        }
+    }
+}
+}

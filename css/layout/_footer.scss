@@ -1,0 +1,114 @@
+.footer {
+    padding: 48px 0 24px;
+    border-top: 1px solid #e4e5e6;
+    background-color: #f8f8f8;
+
+    .footer__flex {
+        padding: 0 4px;
+        display: flex;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #e4e5e6;
+
+        .flex__content {
+            width: 25%;
+        }
+
+        h5 {
+            margin-bottom: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        ul {
+            li {
+                list-style: none;
+                font-size: 14px;
+                line-height: 20px;
+                color: #484848;
+                margin-bottom: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .copyright__flex {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .copyright__text {
+            flex-wrap: wrap;
+
+            span {
+                margin: 0 5px;
+                font-size: 14px;
+                line-height: 1.43;
+                color: #484848;
+            }
+        }
+
+        .social__icons {
+            flex-wrap: nowrap;
+
+            img {
+                cursor: pointer;
+                margin: 0 8px 0 0px;
+            }
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width:850px) {
+    .footer {
+        .footer__flex {
+            flex-wrap: wrap;
+            gap: 40px;
+
+            .flex__content {
+                flex: 1 1 40%;
+            }
+        }
+
+        .copyright__flex {
+            .copyright__text {
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .footer {
+        .footer__flex {
+            flex-direction: column;
+            border-bottom: none;
+
+            .flex__content {
+                flex: 1 1 1;
+                width: 100%;
+                border-bottom: 1px solid #e4e5e6;
+                padding-bottom: 15px;
+            }
+        }
+
+        .copyright__flex {
+            flex-direction: column;
+            align-items: flex-start;
+            .copyright__text {
+                max-width: 100%;
+            }
+            .social__icons{
+                margin-top: 25px;
+            }
+        }
+    }
+}
