@@ -1,3 +1,6 @@
+@import '../abstracts/variables',
+'../abstracts/mixins';
+
 .footer {
     padding: 48px 0 24px;
     border-top: 1px solid #e4e5e6;
@@ -67,7 +70,7 @@
 }
 
 
-@media only screen and (max-width:850px) {
+@include devices(tablet) {
     .footer {
         .footer__flex {
             flex-wrap: wrap;
@@ -86,7 +89,7 @@
     }
 }
 
-@media only screen and (max-width:600px) {
+@include devices(mobile) {
     .footer {
         .footer__flex {
             flex-direction: column;

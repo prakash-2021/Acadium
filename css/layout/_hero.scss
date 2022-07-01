@@ -1,4 +1,5 @@
-@import '../abstracts/variables';
+@import '../abstracts/variables',
+'../abstracts/mixins';
 
 .hero {
     padding-top: 170px;
@@ -19,7 +20,7 @@
     }
 }
 
-@media only screen and (max-width: 850px)  {
+@include devices(tablet)  {
     .hero{
         &__wrapper{
             flex: 0 0 83.33%;
@@ -28,7 +29,7 @@
     }
 }
 
-@media only screen and (max-width: 600px)  {
+@include devices(mobile) {
     .hero{
         padding-top: 90px;
         margin-bottom: 96px;

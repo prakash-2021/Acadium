@@ -1,4 +1,5 @@
-@import '../abstracts/variables';
+@import '../abstracts/variables',
+'../abstracts/mixins';
 
 .empowering {
     background-color: #f8f8f8;
@@ -135,7 +136,7 @@
     opacity: .7;
 }
 
-@media only screen and (max-width: 850px) {
+@include devices(tablet){
     .empowering {
         .card-border {
             min-width: 100%;
@@ -149,7 +150,7 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@include devices(mobile) {
     .empowering{
     .pagination-arow {
         display: none;

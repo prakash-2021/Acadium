@@ -1,4 +1,5 @@
-@import '../abstracts/variables';
+@import '../abstracts/variables',
+'../abstracts/mixins';
 
 .card-link {
     background-image: url('../../img/asset\ 35.svg');
@@ -159,7 +160,7 @@
     }
 }
 
-@media only screen and (max-width: 850px) {
+@include  devices(tablet){
     .card-link {
         .banner-purple {
             .banner__grid {
@@ -176,7 +177,7 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@include devices(mobile){
     .card-link {
         background-image: none;
 

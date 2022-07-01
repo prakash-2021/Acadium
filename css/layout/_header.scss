@@ -1,4 +1,5 @@
-@import '../abstracts/variables';
+@import '../abstracts/variables',
+'../abstracts/mixins';
 
 header {
     position: fixed;
@@ -8,6 +9,10 @@ header {
     bottom: auto;
     z-index: 100;
     background-color: white;
+
+    .container{
+        position: relative;
+    }
 
     .nav {
         display: flex;
@@ -36,8 +41,11 @@ header {
         &__link {
             list-style: none;
             padding: 0 12px;
-            display: flex;
-            align-items: center;
+            
+            &__flex{
+                display: flex;
+                align-items: center;
+            }
 
             .link__list {
                 text-decoration: none;
@@ -58,6 +66,10 @@ header {
                 line-height: 24px;
                 border-radius: 25px;
             }
+            .btn__group {
+                display: flex;
+                align-items: center;
+            }
         }
 
         .drop--link:hover {
@@ -75,6 +87,10 @@ header {
     .hover__card__first {
         display: none;
         gap: 20px;
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        background-color: white;
 
 
         .card {
@@ -124,11 +140,10 @@ header {
     }
 }
 
-@media only screen and (max-width: 850px) {
+@include devices(tablet){
     header {
         .nav {
             padding: 16px 0;
-
 
             &__list {
                 align-items: flex-start;
@@ -141,6 +156,8 @@ header {
                 height: 100vh;
                 padding: 0 24px;
                 transition: .5s;
+                height: 100vh;
+                overflow: auto;
 
                 figure {
                     width: 100%;
@@ -175,8 +192,8 @@ header {
 
         .btn__group {
             display: flex;
-            flex-direction: column-reverse;
             align-items: center;
+            flex-direction: column-reverse;
             vertical-align: center;
 
             .btn-sign {
@@ -191,10 +208,18 @@ header {
         .btn {
             border-bottom-width: 0;
         }
-    }
+        .hover__card__first {
+            flex-direction: column;
+            z-index: 100;
+            padding: 0 10px;
+            height: 100%;
+            margin-top: 50px;
+            position: static;
 
-    .hover__card__first {
-        flex-direction: column;
-        display: none;
+        }
+    
+        .hover__card__second{
+
+        }
     }
 }

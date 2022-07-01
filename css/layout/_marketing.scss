@@ -1,4 +1,5 @@
-@import '../abstracts/variables';
+@import '../abstracts/variables',
+'../abstracts/mixins';
 
 .marketing {
     background-color: #222;
@@ -84,7 +85,7 @@
     }
 }
 
-@media only screen and (max-width:600px) {
+@include devices(mobile) {
     .marketing {
         padding: 100px 0;
         .marketing__text {

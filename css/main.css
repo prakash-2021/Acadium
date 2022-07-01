@@ -1,22 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
-}
-
-img {
-  max-width: 100%;
-}
-
-.container {
-  max-width: 1248px;
-  margin: 0 auto;
-}
-
 .heading-one {
   font-size: 80px;
   line-height: 1.05;
@@ -81,9 +63,6 @@ img {
 }
 
 @media only screen and (max-width: 850px) {
-  .container {
-    padding: 0 12px;
-  }
   .heading-one {
     font-size: 48px;
   }
@@ -123,6 +102,10 @@ header {
   background-color: white;
 }
 
+header .container, header .container--fluid {
+  position: relative;
+}
+
 header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,6 +142,9 @@ header .nav__list figure .cross-icon {
 header .nav__link {
   list-style: none;
   padding: 0 12px;
+}
+
+header .nav__link__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +173,15 @@ header .nav__link .btn--primary {
   border-radius: 25px;
 }
 
+header .nav__link .btn__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header .nav .drop--link:hover .drop--icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -199,6 +194,10 @@ header .nav .ham-icon {
 header .hover__card__first {
   display: none;
   gap: 20px;
+  position: absolute;
+  left: 0%;
+  top: 100%;
+  background-color: white;
 }
 
 header .hover__card__first .card {
@@ -269,6 +268,8 @@ header .btn-sign {
     padding: 0 24px;
     -webkit-transition: .5s;
     transition: .5s;
+    height: 100vh;
+    overflow: auto;
   }
   header .nav__list figure {
     width: 100%;
@@ -298,13 +299,13 @@ header .btn-sign {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     vertical-align: center;
   }
   header .btn__group .btn-sign {
@@ -316,12 +317,16 @@ header .btn-sign {
   header .btn {
     border-bottom-width: 0;
   }
-  .hover__card__first {
+  header .hover__card__first {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    display: none;
+    z-index: 100;
+    padding: 0 10px;
+    height: 100%;
+    margin-top: 50px;
+    position: static;
   }
 }
 
@@ -359,6 +364,36 @@ header .btn-sign {
   }
   .hero .btn--outline {
     margin-top: 15px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container, .container--fluid {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 850px) {
+  .container, .container--fluid {
+    padding: 0 12px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container--fluid {
+    padding: 0;
   }
 }
 
@@ -1008,7 +1043,7 @@ header .btn-sign {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #4058DA;
+  color: #4058da;
   margin-bottom: 48px;
   cursor: pointer;
 }

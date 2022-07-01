@@ -1,0 +1,18 @@
+@import '../abstracts/mixins';
+
+.container {
+    max-width: 1248px;
+    margin: 0 auto;
+
+    @include devices(tablet){
+            padding: 0 12px;
+    }
+}
+
+.container--fluid{
+    @extend .container;
+    @include devices(tablet){
+        padding: 0;
+}
+
+}
